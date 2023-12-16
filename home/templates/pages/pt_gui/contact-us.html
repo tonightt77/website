@@ -11,18 +11,19 @@
             <h1 class="fw-bolder display-2 text-center mb-5 mt-7">Contact Us</h1>
             <div class="row g-5">
                 <div class="col-12 col-md-6">
-                    <form>
+                    <form id="contactForm">
                         <div class="mb-4">
-                            <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
-                        </div>
-                        <div class="mb-4">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
                         </div>
                         <div class="mb-4">
                             <label for="emailAddress" class="form-label">Email Address</label>
                             <input type="email" class="form-control" id="emailAddress" placeholder="Enter your email address">
+                        </div>
+                        <!-- subject -->
+                        <div class="mb-4">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Enter your subject">
                         </div>
                         <div class="mb-4">
                             <label for="questionsAndQueries" class="form-label">Message</label>
@@ -42,5 +43,8 @@
         </div>
     </section>
 </main>
-
+{% block javascript %}
+<script src="../../../../custom_static/assets/js/contactFormSubmit.js" ></script>
+{% endblock javascript %}
 {% endblock content %}
+
